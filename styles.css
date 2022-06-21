@@ -40,18 +40,17 @@ h1{
     transform: translateY(3px);
 }
 
-.container{
-    position: relative; 
+.container{ 
     width: 600px;
     height: 600px;
     margin: auto;
-    margin-top: 20px;
     border: 60px solid #B1E5F2;
     border-radius: 5%;
     display: grid;
     grid-template-columns: repeat(12, 1fr );
     grid-template-rows: repeat(12, 1fr); 
     z-index: 0;
+    transform: translateY(-30px);
 }
 
 .items{
@@ -73,14 +72,17 @@ h1{
     background-color: #B1E5F2;
 }
 .main{
+    display: flex;
     position: relative;
+    flex-direction: column;
 }
 .title{
+    transform: translateY(30px);
+    width: 600px;
     font-family: fantasy;
-    position: absolute;
-    transform: translateX(620px)translateY(10px);
     z-index: 1;
-    background-color:#B1E5F2; 
+    margin: auto;
+    background-color: #B1E5F2;
     color: #272635;
-  
 }
+
