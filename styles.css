@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+h1{
+    text-align: center;
+}
+
+.everythingContainer{
+    display: flex;  
+    justify-content: space-evenly;
+    width: 600px;
+    margin: auto;
+}
+.buttons{
+    height: 40px;
+    width: 80px;
+}
+
+.container{
+    position: relative; 
+    width: 600px;
+    height: 600px;
+    margin: auto;
+    margin-top: 5px;
+    border: 30px solid grey;
+    border-radius: 5%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr );
+    grid-template-rows: repeat(4, 1fr); 
+}
+
+.items{
+    box-sizing: border-box;
+    margin: 0px;
+    border: 1px solid black;
+}
