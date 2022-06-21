@@ -47,10 +47,8 @@ h1{
     border: 60px solid #B1E5F2;
     border-radius: 5%;
     display: grid;
-    grid-template-columns: repeat(12, 1fr );
-    grid-template-rows: repeat(12, 1fr); 
-    z-index: 0;
-    transform: translateY(-30px);
+    grid-template-columns: repeat(8, 1fr );
+    grid-template-rows: repeat(8, 1fr);  
 }
 
 .items{
@@ -61,8 +59,8 @@ h1{
 }
 
 .label{
+    transform: translateY(10px);
     font-size: 1.2em;
-    height: 40px;
     color: #B1E5F2;
 }
 .submit{
@@ -70,19 +68,19 @@ h1{
     font-size: 1.3em;
     height: 40px;
     background-color: #B1E5F2;
+    border-radius: 20px;
 }
 .main{
     display: flex;
     position: relative;
     flex-direction: column;
+    margin-top:10px;
 }
 .title{
-    transform: translateY(30px);
     width: 600px;
     font-family: fantasy;
-    z-index: 1;
     margin: auto;
-    background-color: #B1E5F2;
-    color: #272635;
+    background-color: #272635;
+    color: #B1E5F2;
 }
 

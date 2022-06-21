@@ -4,13 +4,39 @@ const clear = document.querySelector("#clear")
 const black = document.querySelector("#black")
 const random = document.querySelector("#random")
 const eraser = document.querySelector("#eraser")
+const submit = document.querySelector("#submit")
+let gridSize = document.querySelector("#input")
 
-for (i = 0; i < 144; i++){  
-    const div = document.createElement("div")
+
+
+
+
+
+for (i = 0; i < 64; i++){  
+    const div = document.createElement("div");
     container.append(div);
     div.classList.add('items');
-    div.classList.add('manyDivs')
+    div.classList.add('manyDivs');
 }
+
+function removeAllChildNodes(parent){
+    while (container.firstChild) {
+        container.removeChild(container.firstChild)
+    }
+}
+function returnText(){
+    removeAllChildNodes(container);
+    let input = document.getElementById("userInput").value;
+    container.style.gridTemplateColumns = `repeat(${input}, 1fr)`;
+    container.style.gridTemplateRows = `repeat(${input}, 1fr)`;
+    for (i = 0; i < input ** 2; i++){
+        const div = document.createElement("div");
+        container.append(div);
+        div.classList.add('items');
+        div.classList.add('manyDivs');
+}
+}
+
 
 document.querySelectorAll(".manyDivs").forEach(item =>{
     item.addEventListener("mouseover", function(){
@@ -35,7 +61,7 @@ black.addEventListener("click", function toBlack(){
 random.addEventListener("click", function toRandom(){
     document.querySelectorAll(".manyDivs").forEach(item =>{
         item.addEventListener("mouseover", function(){
-            let randomColor = "#" + Math.floor(Math.random()*16777215).toString(16)
+            let randomColor = "#" + Math.floor(Math.random()*16777215).toString(16).padStart(6, '0')
             item.style.backgroundColor = randomColor;
         })
     })
