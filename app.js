@@ -8,7 +8,6 @@ const submit = document.querySelector("#submit")
 let gridSize = document.querySelector("#input")
 
 
-console.log("asdqweq")
 
 
 
